@@ -20,9 +20,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 
 import { ColaboradoresCrudComponent } from './views/colaboradores-crud/colaboradores-crud.component';
 import { ColaboradorCreateComponent } from './components/colaboradores/colaborador-create/colaborador-create.component';
+import { ColaboradorReadComponent } from './components/colaboradores/colaborador-read/colaborador-read.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { ColaboradorCreateComponent } from './components/colaboradores/colaborad
     NavComponent,
     HomeComponent,
     ColaboradoresCrudComponent,
-    ColaboradorCreateComponent
+    ColaboradorCreateComponent,
+    ColaboradorReadComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { ColaboradorCreateComponent } from './components/colaboradores/colaborad
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { ColaboradorCreate } from './colaborador-create/colaborador-create.model';
 import { catchError, EMPTY, map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { ColaboradorListagem, ColaboradorRead } from './colaborador-read/colaborador-read.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,13 @@ export class ColaboradorService {
   create(colaborador: ColaboradorCreate): Observable<ColaboradorCreate> {
     return this.http.post<ColaboradorCreate>(`${environment.API_URL.base}${this.path}`, 
     colaborador).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
+  read(): Observable<ColaboradorListagem> {
+    return this.http.get<ColaboradorListagem>(`${environment.API_URL.base}${this.path}`).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
