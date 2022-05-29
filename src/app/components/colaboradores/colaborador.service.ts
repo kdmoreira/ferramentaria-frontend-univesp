@@ -38,6 +38,22 @@ export class ColaboradorService {
     );
   }
 
+  readById(id: string): Observable<ColaboradorCreate> {
+    const url = `${environment.API_URL.base}${this.path}/${id}`;
+    return this.http.get<ColaboradorCreate>(url).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
+  update(colaborador: ColaboradorCreate): Observable<ColaboradorCreate> {
+    const url = `${environment.API_URL.base}${this.path}`;
+    return this.http.put<ColaboradorCreate>(url, colaborador).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
   errorHandler(e: HttpErrorResponse): Observable<any> {
     this.showMessage(e.error.Message, true);
     return EMPTY;

@@ -3,6 +3,7 @@ import { PerfilEnum } from "../perfil-enum.model";
 import { RoleEnum } from "../role-enum.model";
 
 export interface ColaboradorCreate {
+    id?: Guid,
     cpf: string,
     matricula: string,
     nome: string,

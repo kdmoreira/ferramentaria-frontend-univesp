@@ -1,0 +1,57 @@
+<mat-card>
+    <mat-card-title>Alterar Colaborador</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="CPF"
+                [(ngModel)]="colaboradorCreate.cpf" name="cpf" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Matrícula"
+                [(ngModel)]="colaboradorCreate.matricula" name="matricula" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+                [(ngModel)]="colaboradorCreate.nome" name="nome" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Sobrenome"
+                [(ngModel)]="colaboradorCreate.sobrenome" name="sobrenome" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email"
+                [(ngModel)]="colaboradorCreate.email" name="email" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone"
+                [(ngModel)]="colaboradorCreate.telefone" name="telefone" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cargo"
+                [(ngModel)]="colaboradorCreate.cargo" name="cargo" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Empresa"
+                [(ngModel)]="colaboradorCreate.empresa" name="empresa" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Supervisor"
+                [(ngModel)]="colaboradorCreate.supervisorID" name="supervisorID">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Perfil"
+                [(ngModel)]="colaboradorCreate.perfil" name="perfil" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Permissão"
+                [(ngModel)]="colaboradorCreate.role" name="role" required>
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="updateColaborador()" color="accent">
+    Atualizar
+</button>
+
+<button mat-raised-button (click)="cancel()" color="secondary">
+    Cancelar
+</button>

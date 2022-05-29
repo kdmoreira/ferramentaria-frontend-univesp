@@ -25,6 +25,7 @@ import { MatTableModule } from '@angular/material/table';
 import { ColaboradoresCrudComponent } from './views/colaboradores-crud/colaboradores-crud.component';
 import { ColaboradorCreateComponent } from './components/colaboradores/colaborador-create/colaborador-create.component';
 import { ColaboradorReadComponent } from './components/colaboradores/colaborador-read/colaborador-read.component';
+import { ColaboradorUpdateComponent } from './components/colaboradores/colaborador-update/colaborador-update.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ColaboradorReadComponent } from './components/colaboradores/colaborador
     HomeComponent,
     ColaboradoresCrudComponent,
     ColaboradorCreateComponent,
-    ColaboradorReadComponent
+    ColaboradorReadComponent,
+    ColaboradorUpdateComponent
   ],
   imports: [
     BrowserModule,

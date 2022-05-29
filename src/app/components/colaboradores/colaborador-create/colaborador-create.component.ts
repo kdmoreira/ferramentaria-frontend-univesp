@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Guid } from 'guid-typescript';
 import { ColaboradorService } from '../colaborador.service';
 import { PerfilEnum } from '../perfil-enum.model';
 import { RoleEnum } from '../role-enum.model';
@@ -14,6 +15,7 @@ import { ColaboradorCreate } from './colaborador-create.model';
 export class ColaboradorCreateComponent implements OnInit {
 
   colaborador: ColaboradorCreate = {
+    id: undefined,
     cpf: "",
     matricula: "",
     nome: "",
