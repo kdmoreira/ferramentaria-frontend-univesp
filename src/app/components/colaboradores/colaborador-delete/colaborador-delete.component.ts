@@ -4,13 +4,13 @@ import { ColaboradorCreate } from '../colaborador-create/colaborador-create.mode
 import { ColaboradorService } from '../colaborador.service';
 
 @Component({
-  selector: 'app-colaborador-update',
-  templateUrl: './colaborador-update.component.html',
-  styleUrls: ['./colaborador-update.component.css']
+  selector: 'app-colaborador-delete',
+  templateUrl: './colaborador-delete.component.html',
+  styleUrls: ['./colaborador-delete.component.css']
 })
-export class ColaboradorUpdateComponent implements OnInit {
+export class ColaboradorDeleteComponent implements OnInit {
 
-  colaboradorCreate!: ColaboradorCreate;
+  colaborador!: ColaboradorCreate;
 
   constructor(
     private colaboradorService: ColaboradorService,
@@ -21,14 +21,14 @@ export class ColaboradorUpdateComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id') ?? "";
     this.colaboradorService.readById(id).subscribe(colaborador => {
-      this.colaboradorCreate = colaborador;
-      console.log(colaborador);
-    })    
+      this.colaborador = colaborador;
+    })
   }
 
-  updateColaborador(): void {
-    this.colaboradorService.update(this.colaboradorCreate).subscribe(() => {
-      this.colaboradorService.showMessage('Colaborador atualizado com sucesso!');
+  deleteColaborador(): void {
+    const id = this.route.snapshot.paramMap.get('id') ?? "";
+    this.colaboradorService.delete(this.colaborador).subscribe(() => {
+      this.colaboradorService.showMessage("Colaborador inativado com sucesso!");
       this.router.navigate(['/colaboradores']);
     })
   }

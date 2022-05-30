@@ -26,6 +26,7 @@ import { ColaboradoresCrudComponent } from './views/colaboradores-crud/colaborad
 import { ColaboradorCreateComponent } from './components/colaboradores/colaborador-create/colaborador-create.component';
 import { ColaboradorReadComponent } from './components/colaboradores/colaborador-read/colaborador-read.component';
 import { ColaboradorUpdateComponent } from './components/colaboradores/colaborador-update/colaborador-update.component';
+import { ColaboradorDeleteComponent } from './components/colaboradores/colaborador-delete/colaborador-delete.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ColaboradorUpdateComponent } from './components/colaboradores/colaborad
     ColaboradoresCrudComponent,
     ColaboradorCreateComponent,
     ColaboradorReadComponent,
-    ColaboradorUpdateComponent
+    ColaboradorUpdateComponent,
+    ColaboradorDeleteComponent
   ],
   imports: [
     BrowserModule,

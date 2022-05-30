@@ -5,6 +5,7 @@ import { HomeComponent } from './views/home/home.component';
 import { ColaboradoresCrudComponent } from './views/colaboradores-crud/colaboradores-crud.component';
 import { ColaboradorCreateComponent } from './components/colaboradores/colaborador-create/colaborador-create.component';
 import { ColaboradorUpdateComponent } from './components/colaboradores/colaborador-update/colaborador-update.component';
+import { ColaboradorDeleteComponent } from './components/colaboradores/colaborador-delete/colaborador-delete.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: "colaboradores/update/:id",
     component: ColaboradorUpdateComponent
+  },
+  {
+    path: "colaboradores/delete/:id",
+    component: ColaboradorDeleteComponent
   }
 ];
 

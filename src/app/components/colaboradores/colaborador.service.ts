@@ -12,6 +12,8 @@ import { ColaboradorListagem, ColaboradorRead } from './colaborador-read/colabor
 export class ColaboradorService {
 
   path = "colaborador"
+  numeroPagina = 0;
+  tamanhoPagina = 40;
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -32,7 +34,11 @@ export class ColaboradorService {
   }
 
   read(): Observable<ColaboradorListagem> {
-    return this.http.get<ColaboradorListagem>(`${environment.API_URL.base}${this.path}`).pipe(
+    let pageParam = `numeroPagina=${this.numeroPagina}`;
+    let countParam = `tamanhoPagina=${this.tamanhoPagina}`;
+    return this.http
+    .get<ColaboradorListagem>
+    (`${environment.API_URL.base}${this.path}?${pageParam}&${countParam}`).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
@@ -48,6 +54,14 @@ export class ColaboradorService {
 
   update(colaborador: ColaboradorCreate): Observable<ColaboradorCreate> {
     const url = `${environment.API_URL.base}${this.path}`;
+    return this.http.put<ColaboradorCreate>(url, colaborador).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
+  delete(colaborador: ColaboradorCreate): Observable<ColaboradorCreate> {
+    const url = `${environment.API_URL.base}${this.path}/Inativar?id=${colaborador.id}`;
     return this.http.put<ColaboradorCreate>(url, colaborador).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
