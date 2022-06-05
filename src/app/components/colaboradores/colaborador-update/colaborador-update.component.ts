@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ColaboradorCreate } from '../colaborador-create/colaborador-create.model';
+import { ColaboradorCreate, ColaboradorCreateRequest } from '../colaborador-create/colaborador-create.model';
 import { ColaboradorService } from '../colaborador.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ColaboradorService } from '../colaborador.service';
 })
 export class ColaboradorUpdateComponent implements OnInit {
 
-  colaboradorCreate!: ColaboradorCreate;
+  colaboradorCreate!: ColaboradorCreateRequest;
 
   constructor(
     private colaboradorService: ColaboradorService,

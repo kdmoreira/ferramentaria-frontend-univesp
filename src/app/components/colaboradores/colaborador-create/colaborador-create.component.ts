@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Guid } from 'guid-typescript';
 import { ColaboradorService } from '../colaborador.service';
 import { PerfilEnum } from '../perfil-enum.model';
+import { Perfil } from '../perfil.model';
 import { RoleEnum } from '../role-enum.model';
-import { ColaboradorCreate } from './colaborador-create.model';
+import { Role } from '../role.model';
+import { ColaboradorCreateUI } from './colaborador-create.model';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { ColaboradorCreate } from './colaborador-create.model';
 })
 export class ColaboradorCreateComponent implements OnInit {
 
-  colaborador: ColaboradorCreate = {
+  colaborador: ColaboradorCreateUI = {
     id: undefined,
     cpf: "",
     matricula: "",
@@ -25,9 +26,20 @@ export class ColaboradorCreateComponent implements OnInit {
     cargo: "",
     empresa: "",
     supervisorID: undefined,
-    perfil: PerfilEnum.COLABORADOR,
-    role: RoleEnum.COLABORADOR
+    perfil: {value: PerfilEnum.COLABORADOR, viewValue: 'Colaborador'},
+    role: {value: RoleEnum.COLABORADOR, viewValue: 'Colaborador'}
   }
+
+  perfis: Perfil[] = [
+    {value: PerfilEnum.COLABORADOR, viewValue: 'Colaborador'},
+    {value: PerfilEnum.SUPERVISOR, viewValue: 'Supervisor'},
+    {value: PerfilEnum.GERENTE, viewValue: 'Gerente'}
+  ];
+
+  roles: Role[] = [
+    {value: RoleEnum.ADMINISTRADOR, viewValue: 'Administrador'},
+    {value: RoleEnum.COLABORADOR, viewValue: 'Colaborador'}
+  ];
 
   constructor(
     private colaboradorService: ColaboradorService,

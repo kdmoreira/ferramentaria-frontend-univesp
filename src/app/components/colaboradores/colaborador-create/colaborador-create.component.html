@@ -2,48 +2,48 @@
     <mat-card-title>Novo Colaborador</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="CPF"
-                [(ngModel)]="colaborador.cpf" name="cpf" required>
+            <input matInput placeholder="CPF" [(ngModel)]="colaborador.cpf" name="cpf" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Matrícula"
-                [(ngModel)]="colaborador.matricula" name="matricula" required>
+            <input matInput placeholder="Matrícula" [(ngModel)]="colaborador.matricula" name="matricula" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Nome"
-                [(ngModel)]="colaborador.nome" name="nome" required>
+            <input matInput placeholder="Nome" [(ngModel)]="colaborador.nome" name="nome" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Sobrenome"
-                [(ngModel)]="colaborador.sobrenome" name="sobrenome" required>
+            <input matInput placeholder="Sobrenome" [(ngModel)]="colaborador.sobrenome" name="sobrenome" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Email"
-                [(ngModel)]="colaborador.email" name="email" required>
+            <input matInput placeholder="Email" [(ngModel)]="colaborador.email" name="email" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Telefone"
-                [(ngModel)]="colaborador.telefone" name="telefone" required>
+            <input matInput placeholder="Telefone" [(ngModel)]="colaborador.telefone" name="telefone" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Cargo"
-                [(ngModel)]="colaborador.cargo" name="cargo" required>
+            <input matInput placeholder="Cargo" [(ngModel)]="colaborador.cargo" name="cargo" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Empresa"
-                [(ngModel)]="colaborador.empresa" name="empresa" required>
+            <input matInput placeholder="Empresa" [(ngModel)]="colaborador.empresa" name="empresa" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Supervisor"
-                [(ngModel)]="colaborador.supervisorID" name="supervisorID">
+            <input matInput placeholder="Supervisor" [(ngModel)]="colaborador.supervisorID" name="supervisorID">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Perfil"
-                [(ngModel)]="colaborador.perfil" name="perfil" required>
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Perfil</mat-label>
+            <mat-select required [(ngModel)]="colaborador.perfil">
+                <mat-option *ngFor="let perfil of perfis" [value]="perfil.value">
+                    {{perfil.viewValue}}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Permissão"
-                [(ngModel)]="colaborador.role" name="role" required>
+        <mat-form-field appearance="fill">
+            <mat-label>Permissão</mat-label>
+            <mat-select required>
+                <mat-option *ngFor="let role of roles" [value]="role.value">
+                    {{role.viewValue}}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
     </form>
 </mat-card>
