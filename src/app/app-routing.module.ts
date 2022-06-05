@@ -10,6 +10,8 @@ import { FerramentasCrudComponent } from './views/ferramentas-crud/ferramentas-c
 import { FerramentaCreateComponent } from './components/ferramentas/ferramenta-create/ferramenta-create.component';
 import { FerramentaUpdateComponent } from './components/ferramentas/ferramenta-update/ferramenta-update.component';
 import { FerramentaDeleteComponent } from './components/ferramentas/ferramenta-delete/ferramenta-delete.component';
+import { EmprestimosCrudComponent } from './views/emprestimos-crud/emprestimos-crud.component';
+import { EmprestimoCreateComponent } from './components/emprestimos/emprestimo-create/emprestimo-create.component';
 
 const routes: Routes = [
   {
@@ -47,6 +49,14 @@ const routes: Routes = [
   {
     path: "ferramentas/delete/:id",
     component: FerramentaDeleteComponent
+  },
+  {
+    path: "emprestimos",
+    component: EmprestimosCrudComponent
+  },
+  {
+    path: "emprestimos/create",
+    component: EmprestimoCreateComponent
   }
 ];
 
