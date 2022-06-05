@@ -28,6 +28,11 @@ import { ColaboradorCreateComponent } from './components/colaboradores/colaborad
 import { ColaboradorReadComponent } from './components/colaboradores/colaborador-read/colaborador-read.component';
 import { ColaboradorUpdateComponent } from './components/colaboradores/colaborador-update/colaborador-update.component';
 import { ColaboradorDeleteComponent } from './components/colaboradores/colaborador-delete/colaborador-delete.component';
+import { FerramentasCrudComponent } from './views/ferramentas-crud/ferramentas-crud.component';
+import { FerramentaCreateComponent } from './components/ferramentas/ferramenta-create/ferramenta-create.component';
+import { FerramentaReadComponent } from './components/ferramentas/ferramenta-read/ferramenta-read.component';
+import { FerramentaUpdateComponent } from './components/ferramentas/ferramenta-update/ferramenta-update.component';
+import { FerramentaDeleteComponent } from './components/ferramentas/ferramenta-delete/ferramenta-delete.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,12 @@ import { ColaboradorDeleteComponent } from './components/colaboradores/colaborad
     ColaboradorCreateComponent,
     ColaboradorReadComponent,
     ColaboradorUpdateComponent,
-    ColaboradorDeleteComponent
+    ColaboradorDeleteComponent,
+    FerramentasCrudComponent,
+    FerramentaCreateComponent,
+    FerramentaReadComponent,
+    FerramentaUpdateComponent,
+    FerramentaDeleteComponent
   ],
   imports: [
     BrowserModule,
