@@ -39,4 +39,31 @@ export class FerramentaService extends BaseService {
       catchError((e) => this.errorHandler(e))
     );
   }
+
+  readById(id: string): Observable<FerramentaCreate> {
+    const url = `${environment.API_URL.base}${this.path}/${id}`;
+    return this.http.get<FerramentaCreate>(url).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
+  update(ferramenta: FerramentaCreate): Observable<FerramentaCreate> {
+    
+    ferramenta.categoriaID = "5138f09b-7dc6-4e06-a983-c182e6d7d173";
+
+    const url = `${environment.API_URL.base}${this.path}`;
+    return this.http.put<FerramentaCreate>(url, ferramenta).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
+  delete(ferramenta: FerramentaCreate): Observable<FerramentaCreate> {
+    const url = `${environment.API_URL.base}${this.path}/Inativar?id=${ferramenta.id}`;
+    return this.http.put<FerramentaCreate>(url, ferramenta).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
 }
