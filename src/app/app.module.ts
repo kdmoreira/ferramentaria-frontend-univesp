@@ -35,6 +35,7 @@ import { FerramentaUpdateComponent } from './components/ferramentas/ferramenta-u
 import { FerramentaDeleteComponent } from './components/ferramentas/ferramenta-delete/ferramenta-delete.component';
 import { EmprestimosCrudComponent } from './views/emprestimos-crud/emprestimos-crud.component';
 import { EmprestimoCreateComponent } from './components/emprestimos/emprestimo-create/emprestimo-create.component';
+import { EmprestimoReadComponent } from './components/emprestimos/emprestimo-read/emprestimo-read.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { EmprestimoCreateComponent } from './components/emprestimos/emprestimo-c
     FerramentaUpdateComponent,
     FerramentaDeleteComponent,
     EmprestimosCrudComponent,
-    EmprestimoCreateComponent
+    EmprestimoCreateComponent,
+    EmprestimoReadComponent
   ],
   imports: [
     BrowserModule,
