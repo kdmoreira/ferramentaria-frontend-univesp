@@ -4,51 +4,56 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './components/template/header/header.component';
 
+// * Material Imports
+import { MatSidenavModule } from'@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { FooterComponent } from './components/template/footer/footer.component';
+import { MatMenuModule} from "@angular/material/menu";
+import { MatIconModule} from "@angular/material/icon";
+import { MatDividerModule} from "@angular/material/divider";
+import { MatListModule } from'@angular/material/list';
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+
+// * Components Imports
+import { HeaderComponent } from './components/template/header/header.component';
 import { NavComponent } from './components/template/nav/nav.component';
+import { HomeComponent } from './components/views/home/home.component';
+import { DashboardComponent } from './components/views/dashboard/dashboard.component';
+import { FooterComponent } from './components/template/footer/footer.component';
+import { ColaboradoresComponent } from './components/views/colaboradores/colaboradores.component';
+import { FerramentasComponent } from './components/views/ferramentas/ferramentas.component';
+import { EmprestimosComponent } from './components/views/emprestimos/emprestimos.component';
 
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { HomeComponent } from './views/home/home.component';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms'
-import { MatFormFieldModule } from '@angular/material/form-field'
-import { MatInputModule } from '@angular/material/input';
-
-import { ColaboradoresCrudComponent } from './views/colaboradores-crud/colaboradores-crud.component';
-import { ColaboradorCreateComponent } from './components/colaboradores/colaborador-create/colaborador-create.component';
 
 @NgModule({
   declarations: [
+    // * Components Imports
     AppComponent,
     HeaderComponent,
     FooterComponent,
     NavComponent,
     HomeComponent,
-    ColaboradoresCrudComponent,
-    ColaboradorCreateComponent
+    DashboardComponent,
+    ColaboradoresComponent,
+    FerramentasComponent,
+    EmprestimosComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    MatCardModule,
-    MatButtonModule,
-    MatSnackBarModule,
-    HttpClientModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+
+        // * Material Imports
+        MatToolbarModule,
+        MatSidenavModule,
+        MatListModule,
+        MatMenuModule,
+        MatIconModule,
+        MatDividerModule,
+        MatButtonModule,
+        MatCardModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
