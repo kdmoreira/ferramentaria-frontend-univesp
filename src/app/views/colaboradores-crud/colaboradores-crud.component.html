@@ -1,6 +1,13 @@
-<button mat-raised-button (click)="navigateToColaboradorCreate()"
-color="primary">
-    Novo Colaborador
-</button>
+<div class="container-fluid page">
+    <div class="page_box p-3 mt-2">Colaboradores</div>
+    <div class="page_content shadow p-3 position-relative">
+        <div class="page_content-data position-relative">
+            <button mat-raised-button (click)="navigateToColaboradorCreate()">Novo Colaborador</button>
+        </div>
+        <div class="page_content-data position-relative">
+            <app-colaborador-read></app-colaborador-read>
+        </div>
+    </div>
+</div>
 
-<!---<app-colaborador-read></app-colaborador-read>--->
+

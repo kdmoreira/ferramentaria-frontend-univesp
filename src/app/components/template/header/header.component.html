@@ -1,15 +1,30 @@
 <mat-toolbar class="header mat-elevation-z4">
-    <span>
-        <a routerLink="/">
-            <img class="logo" src="assets/img/ferramentaria-logo.png" alt="logo">
-        </a>
-    </span>
-    <span class="title-group">
-        <a>
-            <i class="material-icons">
-                home
-            </i>
-            Início
-        </a>
-    </span>
+    <mat-toolbar-row class="justify-content-between">
+        <button mat-icon-button (click)="toggleSidebar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="row mr-2 ml-auto">
+            <ul>
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menu"
+                            class="user mt-2 d-flex align-items-center">
+                        <img src="assets/img/ferramentaria-logo.png"
+                             alt=""
+                             class="user-image mr-1 p-2"/>
+                        User Name
+                        <mat-icon class="user-image-icon ml-1">
+                            keyboard_arrow_down
+                        </mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            Logout
+                        </button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+
 </mat-toolbar>

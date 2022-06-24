@@ -1,0 +1,50 @@
+<div class="container-fluid page">
+    <div class="page_box p-3 mt-2">Novo Empréstimo</div>
+    <div class="page_content shadow p-3 position-relative">
+        <div class="page_content-data position-relative">
+            <div class="card">
+                <mat-card>
+                    <mat-card-title>Novo Empréstimo</mat-card-title>
+                    <form>
+                        <mat-form-field>
+                            <input matInput type="number" [(ngModel)]="emprestimo.ferramentaID" name="ferramenta" required>
+                            <mat-placeholder class="placeholder">Ferramenta</mat-placeholder>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput type="number" [(ngModel)]="emprestimo.colaboradorID" name="colaborador" required>
+                            <mat-placeholder class="placeholder">Colaborador</mat-placeholder>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput type="number" [(ngModel)]="emprestimo.prazoEmDias" name="prazoEmDias" required>
+                            <mat-placeholder class="placeholder">Prazo em Dias</mat-placeholder>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput type="number" [(ngModel)]="emprestimo.quantidade" name="quantidade" required>
+                            <mat-placeholder class="placeholder">Quantidade</mat-placeholder>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput type="text" [(ngModel)]="emprestimo.observacao" name="observacao" required>
+                            <mat-placeholder class="placeholder">Observação</mat-placeholder>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput type="password" [(ngModel)]="emprestimo.senhaColaborador"
+                                   name="senhaColaborador" autocomplete="off" required>
+                            <mat-placeholder class="placeholder">Senha Colaborador</mat-placeholder>
+                        </mat-form-field>
+
+
+                    </form>
+                    <div class="button-container">
+                        <button mat-raised-button (click)="createEmprestimo()" color="primary">Salvar!</button>
+                        <button mat-raised-button (click)="cancel()" color="accent">Cancelar!</button>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

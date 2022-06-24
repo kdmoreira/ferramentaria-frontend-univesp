@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+}
+
+.return {
+    margin-right: 10px;
+}
+
+.return > i {
+    color: #26d93b;
+}
+
+.delete > i {
+    color: #e35e6b;
+}
