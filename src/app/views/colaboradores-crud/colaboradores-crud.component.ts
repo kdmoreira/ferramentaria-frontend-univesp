@@ -5,7 +5,7 @@ import { HeaderService } from 'src/app/components/template/header/header.service
 @Component({
   selector: 'app-colaboradores-crud',
   templateUrl: './colaboradores-crud.component.html',
-  styleUrls: ['./colaboradores-crud.component.css']
+  styleUrls: ['./colaboradores-crud.component.scss']
 })
 export class ColaboradoresCrudComponent implements OnInit {
 

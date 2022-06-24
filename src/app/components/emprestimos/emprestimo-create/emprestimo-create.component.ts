@@ -6,7 +6,7 @@ import { EmprestimoCreate } from './emprestimo-create.model';
 @Component({
   selector: 'app-emprestimo-create',
   templateUrl: './emprestimo-create.component.html',
-  styleUrls: ['./emprestimo-create.component.css']
+  styleUrls: ['./emprestimo-create.component.scss']
 })
 export class EmprestimoCreateComponent implements OnInit {
 

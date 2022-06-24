@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-ferramentas-crud',
   templateUrl: './ferramentas-crud.component.html',
-  styleUrls: ['./ferramentas-crud.component.css']
+  styleUrls: ['./ferramentas-crud.component.scss']
 })
 export class FerramentasCrudComponent implements OnInit {
 

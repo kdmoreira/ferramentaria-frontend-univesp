@@ -1,6 +1,14 @@
-<button mat-raised-button (click)="navigateToEmprestimoCreate()"
-color="primary">
-    Novo Empréstimo
-</button>
+<div class="container-fluid page">
+    <div class="page_box p-3 mt-2">Empréstimos</div>
+    <div class="page_content shadow p-3 position-relative">
+        <div class="page_content-data position-relative">
+            <button mat-raised-button (click)="navigateToEmprestimoCreate()">Novo Empréstimo</button>
+        </div>
+        <div class="page_content-data position-relative">
+        <app-emprestimo-read></app-emprestimo-read>
+        </div>
+    </div>
+</div>
 
-<app-emprestimo-read></app-emprestimo-read>
+
+

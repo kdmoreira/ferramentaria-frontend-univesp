@@ -1,0 +1,37 @@
+.page {
+  color: white;
+  padding: 0 1rem;
+  background: #f1f5f9;
+
+  &_box{
+    min-height: 160px;
+    background: #1e293b;
+    margin: 0 -1rem;
+    font-size: 36px;
+  }
+  &_content{
+    min-height: calc(94vh - 174px);
+    border-radius: 10px;
+    margin-top: -2rem;
+    background: white;
+    color: black;
+    font-size: 2rem;
+    &-data{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.home{
+  background: #f1f2f3;
+
+  .title{
+    color: #1e293b;
+  }
+  .subtitle{
+    color: #1e293b;
+  }
+}
+

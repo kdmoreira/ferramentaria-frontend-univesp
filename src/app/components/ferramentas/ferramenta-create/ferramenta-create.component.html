@@ -1,37 +1,59 @@
-<mat-card>
-    <mat-card-title>Nova Ferramenta</mat-card-title>
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="Código" [(ngModel)]="ferramenta.codigo" name="codigo" required>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Descrição" [(ngModel)]="ferramenta.descricao" name="descricao" required>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Quantidade Total" [(ngModel)]="ferramenta.quantidadeTotal" name="quantidadeTotal" required>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Valor de Compra" [(ngModel)]="ferramenta.valorCompra" name="valorCompra" required>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Localização" [(ngModel)]="ferramenta.localizacao" name="localizacao" required>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Número Patrimonial" [(ngModel)]="ferramenta.numeroPatrimonial" name="numeroPatrimonial" required>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Fabricante" [(ngModel)]="ferramenta.fabricante" name="fabricante" required>
-        </mat-form-field>
-        <!--<mat-form-field>
-            <input matInput placeholder="Categoria" [(ngModel)]="ferramenta.categoriaID" name="categoriaID">
-        </mat-form-field>-->
-    </form>
-</mat-card>
+<div class="container-fluid page">
+    <div class="page_box p-3 mt-2">Nova Ferramenta</div>
+    <div class="page_content shadow p-3 position-relative">
+        <div class="page_content-data position-relative">
+            <div class="card">
+                <mat-card>
+                    <mat-card-title>Nova Ferramenta</mat-card-title>
+                    <form>
+                        <mat-form-field>
+                            <input matInput type="number" [(ngModel)]="ferramenta.codigo" name="codigo" required>
+                            <mat-placeholder class="placeholder">Código</mat-placeholder>
+                        </mat-form-field>
 
-<button mat-raised-button (click)="createFerramenta()" color="primary">
-    Salvar
-</button>
+                        <mat-form-field>
+                            <input matInput type="text" [(ngModel)]="ferramenta.descricao" name="descricao" required>
+                            <mat-placeholder class="placeholder">Descrição</mat-placeholder>
+                        </mat-form-field>
 
-<button mat-raised-button (click)="cancel()" color="secondary">
-    Cancelar
-</button>
+                        <mat-form-field>
+                            <input matInput type="number" [(ngModel)]="ferramenta.quantidadeTotal"
+                                   name="quantidadeTotal" required>
+                            <mat-placeholder class="placeholder">Quantidade total</mat-placeholder>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput type="number" [(ngModel)]="ferramenta.valorCompra" name="valorCompra"
+                                   required>
+                            <mat-placeholder class="placeholder">Valor da compra</mat-placeholder>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput type="text" [(ngModel)]="ferramenta.localizacao" name="localizacao"
+                                   required>
+                            <mat-placeholder class="placeholder">Localização</mat-placeholder>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput type="number" [(ngModel)]="ferramenta.numeroPatrimonial"
+                                   name="numeroPatrimonial" required>
+                            <mat-placeholder class="placeholder">Número patrimonial</mat-placeholder>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput type="text" [(ngModel)]="ferramenta.fabricante" name="fabricante" required>
+                            <mat-placeholder class="placeholder">Fabricante</mat-placeholder>
+                        </mat-form-field>
+                        <!--<mat-form-field>
+                            <input matInput placeholder="Categoria" [(ngModel)]="ferramenta.categoriaID" name="categoriaID">
+                        </mat-form-field>-->
+                    </form>
+                    <div class="button-container">
+                        <button mat-raised-button (click)="createFerramenta()" color="primary">Salvar!</button>
+                        <button mat-raised-button (click)="cancel()" color="accent">Cancelar!</button>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

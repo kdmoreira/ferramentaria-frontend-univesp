@@ -1,6 +1,11 @@
-<button mat-raised-button (click)="navigateToFerramentaCreate()"
-color="primary">
-    Nova Ferramenta
-</button>
+<div class="container-fluid page">
+    <div class="page_box p-3 mt-2">Ferramentas</div>
+    <div class="page_content shadow p-3 position-relative">
+        <div class="page_content-data position-relative">
+            <button mat-raised-button (click)="navigateToFerramentaCreate()">Nova Ferramenta</button>
+        </div>
+        <app-ferramenta-read></app-ferramenta-read>
+    </div>
+</div>
 
-<app-ferramenta-read></app-ferramenta-read>
+

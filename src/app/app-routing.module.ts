@@ -14,10 +14,8 @@ import { EmprestimosCrudComponent } from './views/emprestimos-crud/emprestimos-c
 import { EmprestimoCreateComponent } from './components/emprestimos/emprestimo-create/emprestimo-create.component';
 
 const routes: Routes = [
-  {
-    path: "",
-    component: HomeComponent
-  },
+  { path: '', redirectTo:'home', pathMatch:'full'},
+  { path: 'home', component: HomeComponent},
   {
     path: "colaboradores",
     component: ColaboradoresCrudComponent

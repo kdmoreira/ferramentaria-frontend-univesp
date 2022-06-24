@@ -1,0 +1,38 @@
+@import "../../../views/emprestimos-crud/emprestimos-crud.component";
+.page_content {
+    min-height: calc(100vh - 174px);
+
+}
+.card{
+    position: absolute;
+    width: 20em;
+    font-size: 0.8em;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    mat-card{
+        display: flex;
+        flex-direction: column;
+        color: gray;
+        background-color: rgb(230, 230, 230);
+
+    }
+    mat-placeholder{
+        color: gray;
+        font-size: 0.6em;
+    }
+    button{
+        margin-right: 10px;
+    }
+    .card .button-container{
+        width: 18em;
+        height: 2em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}

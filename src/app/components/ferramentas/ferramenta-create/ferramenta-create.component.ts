@@ -7,7 +7,7 @@ import { FerramentaCreate } from './ferramenta-create.model';
 @Component({
   selector: 'app-ferramenta-create',
   templateUrl: './ferramenta-create.component.html',
-  styleUrls: ['./ferramenta-create.component.css']
+  styleUrls: ['./ferramenta-create.component.scss']
 })
 export class FerramentaCreateComponent implements OnInit {
 

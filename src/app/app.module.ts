@@ -36,6 +36,8 @@ import { FerramentaDeleteComponent } from './components/ferramentas/ferramenta-d
 import { EmprestimosCrudComponent } from './views/emprestimos-crud/emprestimos-crud.component';
 import { EmprestimoCreateComponent } from './components/emprestimos/emprestimo-create/emprestimo-create.component';
 import { EmprestimoReadComponent } from './components/emprestimos/emprestimo-read/emprestimo-read.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -73,7 +75,9 @@ import { EmprestimoReadComponent } from './components/emprestimos/emprestimo-rea
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

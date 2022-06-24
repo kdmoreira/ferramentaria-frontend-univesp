@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-emprestimos-crud',
   templateUrl: './emprestimos-crud.component.html',
-  styleUrls: ['./emprestimos-crud.component.css']
+  styleUrls: ['./emprestimos-crud.component.scss']
 })
 export class EmprestimosCrudComponent implements OnInit {
 

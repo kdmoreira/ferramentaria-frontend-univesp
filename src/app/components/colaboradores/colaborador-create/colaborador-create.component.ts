@@ -11,7 +11,7 @@ import { ColaboradorCreateUI } from './colaborador-create.model';
 @Component({
   selector: 'app-colaborador-create',
   templateUrl: './colaborador-create.component.html',
-  styleUrls: ['./colaborador-create.component.css']
+  styleUrls: ['./colaborador-create.component.scss']
 })
 export class ColaboradorCreateComponent implements OnInit {
 

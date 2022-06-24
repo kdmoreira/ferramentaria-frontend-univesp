@@ -6,7 +6,7 @@ import { ColaboradorService } from '../colaborador.service';
 @Component({
   selector: 'app-colaborador-delete',
   templateUrl: './colaborador-delete.component.html',
-  styleUrls: ['./colaborador-delete.component.css']
+  styleUrls: ['./colaborador-delete.component.scss']
 })
 export class ColaboradorDeleteComponent implements OnInit {
 

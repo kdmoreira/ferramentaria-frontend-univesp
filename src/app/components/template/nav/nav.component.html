@@ -1,39 +1,30 @@
-<mat-sidenav-container class="container">
-    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
-        <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="/">
-                <i class="material-icons">
-                    home
-                </i>
-                Início
-            </a>
-            <a mat-list-item routerLink="/colaboradores">
-                <i class="material-icons">
-                    groups
-                </i>
-                Colaboradores
-            </a>
-            <a mat-list-item routerLink="/ferramentas">
-                <i class="material-icons">
-                    construction
-                </i>
-                Ferramentas
-            </a>
-            <a mat-list-item routerLink="/emprestimos">
-                <i class="material-icons">
-                    handshake
-                </i>
-                Empréstimos
-            </a>
-            <a mat-list-item>
-                <i class="material-icons">
-                    logout
-                </i>
-                Logout
-            </a>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content class="content">
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+<mat-nav-list class="nav-list">
+
+    <div class="logo py-3">
+        <a routerLink="/home">
+            <img class="logo" src="../../../../assets/img/logo_furnas_branco.png" alt="logo">
+        </a>
+    </div>
+    <mat-divider></mat-divider>
+    <h2 matSubheader class="mt-2">APPLICATIONS</h2>
+    <a mat-list-item routerLink="/home" routerLinkActive="list-item-active">
+        <mat-icon>home</mat-icon>
+        Início
+    </a>
+
+    <a mat-list-item routerLink="/colaboradores" routerLinkActive="list-item-active">
+        <mat-icon>groups</mat-icon>
+        Colaboradores
+    </a>
+
+    <a mat-list-item routerLink="/ferramentas" routerLinkActive="list-item-active">
+        <mat-icon>construction</mat-icon>
+        Ferramentas
+    </a>
+
+    <a mat-list-item routerLink="/emprestimos" routerLinkActive="list-item-active">
+        <mat-icon>handshake</mat-icon>
+        Empréstimos
+    </a>
+
+</mat-nav-list>
