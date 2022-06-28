@@ -7,12 +7,12 @@
                     <mat-card-title>Novo Colaborador</mat-card-title>
                     <form>
                         <mat-form-field>
-                            <input matInput type="number" [(ngModel)]="colaborador.cpf" name="cpf" required>
+                            <input matInput type="text" [(ngModel)]="colaborador.cpf" name="cpf" required>
                             <mat-placeholder class="placeholder">CPF</mat-placeholder>
                         </mat-form-field>
 
                         <mat-form-field>
-                            <input matInput type="number" [(ngModel)]="colaborador.matricula" name="matricula" required>
+                            <input matInput type="text" [(ngModel)]="colaborador.matricula" name="matricula" required>
                             <mat-placeholder class="placeholder">Matrícula</mat-placeholder>
                         </mat-form-field>
 
@@ -45,9 +45,11 @@
                             <input matInput type="text" [(ngModel)]="colaborador.empresa" name="empresa" required>
                             <mat-placeholder class="placeholder">Empresa</mat-placeholder>
                         </mat-form-field>
+
                         <mat-form-field>
-                            <input matInput placeholder="Supervisor" [(ngModel)]="colaborador.supervisorID"
+                            <input matInput type="text" [(ngModel)]="colaborador.supervisorID"
                                    name="supervisorID">
+                                   <mat-placeholder class="placeholder">Supervisor</mat-placeholder>
                         </mat-form-field>
 
                         <mat-form-field appearance="fill">
@@ -58,6 +60,7 @@
                                 </mat-option>
                             </mat-select>
                         </mat-form-field>
+
                         <mat-form-field appearance="fill">
                             <mat-label>Permissão</mat-label>
                             <mat-select required>
@@ -66,6 +69,7 @@
                                 </mat-option>
                             </mat-select>
                         </mat-form-field>
+                        
                     </form>
                     <div class="button-container">
                         <button mat-raised-button (click)="createColaborador()" color="primary">
