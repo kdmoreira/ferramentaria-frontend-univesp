@@ -6,7 +6,7 @@ import { ColaboradorService } from '../colaborador.service';
 @Component({
   selector: 'app-colaborador-update',
   templateUrl: './colaborador-update.component.html',
-  styleUrls: ['./colaborador-update.component.css']
+  styleUrls: ['./colaborador-update.component.scss']
 })
 export class ColaboradorUpdateComponent implements OnInit {
 
