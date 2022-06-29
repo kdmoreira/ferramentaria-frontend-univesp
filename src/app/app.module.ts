@@ -38,6 +38,7 @@ import { EmprestimoCreateComponent } from './components/emprestimos/emprestimo-c
 import { EmprestimoReadComponent } from './components/emprestimos/emprestimo-read/emprestimo-read.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import {MatMenuModule} from "@angular/material/menu";
     FerramentaDeleteComponent,
     EmprestimosCrudComponent,
     EmprestimoCreateComponent,
-    EmprestimoReadComponent
+    EmprestimoReadComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

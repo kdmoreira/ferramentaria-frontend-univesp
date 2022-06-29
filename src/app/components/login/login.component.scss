@@ -1,0 +1,67 @@
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 460px;
+  margin: 0 auto 100px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+}
+.form .form_title{
+  align-items: center;
+  align-content: center;
+  height: 3rem;
+  color: #5d5c5c;
+}
+.form button {
+  text-transform: uppercase;
+  background-color: #818cf8;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background-color: #0f1772;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body {
+  min-height: 100%;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  align-content: center;
+  align-items: center;
+}
+.input{
+  width: 300px;
+}
