@@ -13,6 +13,7 @@ import { FerramentaDeleteComponent } from './components/ferramentas/ferramenta-d
 import { EmprestimosCrudComponent } from './views/emprestimos-crud/emprestimos-crud.component';
 import { EmprestimoCreateComponent } from './components/emprestimos/emprestimo-create/emprestimo-create.component';
 import {LoginComponent} from "./components/login/login.component";
+import {RegisterComponent} from "./components/register/register.component";
 
 const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full'},
@@ -60,6 +61,10 @@ const routes: Routes = [
   {
     path: "login",
     component: LoginComponent
+  },
+  {
+    path: "register",
+    component: RegisterComponent
   }
 ];
 

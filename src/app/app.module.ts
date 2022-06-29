@@ -39,6 +39,7 @@ import { EmprestimoReadComponent } from './components/emprestimos/emprestimo-rea
 import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { LoginComponent } from './components/login/login.component';
     EmprestimosCrudComponent,
     EmprestimoCreateComponent,
     EmprestimoReadComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
