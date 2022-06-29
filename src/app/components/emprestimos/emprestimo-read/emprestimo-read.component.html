@@ -21,13 +21,13 @@
       <!-- Data Empréstimo Column -->
       <ng-container matColumnDef="dataEmprestimo">
         <th mat-header-cell *matHeaderCellDef>Data Empréstimo</th>
-        <td mat-cell *matCellDef="let row">{{row.dataEmprestimo}}</td>
+        <td mat-cell *matCellDef="let row">{{row.dataEmprestimo | date:'dd/MM/yyyy'}}</td>
       </ng-container>
 
       <!-- Data Devolução Column -->
       <ng-container matColumnDef="dataDevolucao">
         <th mat-header-cell *matHeaderCellDef>Data Devolução</th>
-        <td mat-cell *matCellDef="let row">{{row.dataDevolucao}}</td>
+        <td mat-cell *matCellDef="let row">{{row.dataDevolucao | date:'dd/MM/yyyy'}}</td>
       </ng-container>
   
       <!-- Status Column -->
